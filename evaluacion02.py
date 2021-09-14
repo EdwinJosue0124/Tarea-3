@@ -82,5 +82,5 @@ elif opcion == '6':
 else:
     print('Ingrese una opcion correcta')
     
-    os.system("cls") #Limpieza de pantalla
+    os.system("cls")
   
