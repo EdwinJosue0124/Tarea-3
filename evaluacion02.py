@@ -6,7 +6,7 @@ import os
 titanic_pdf = pd.read_csv("D:\Documentos\Cursos\Ciencia de datos\Tarea 3\lista_titanic.csv")
 
 
-#input() lo utilicé para hacer pausas y avanzar cuando se presione el teclado
+
 
 def limpieza():
     lista_titacnic = pd.read_csv('d:\Ciencia de Datos\EVA_03\Titanic.csv')
@@ -27,7 +27,7 @@ def grafica_p():
     print(estado)
     y=np.np.array([estado[0], estado[1]])
 
-    estados=['Cantidad de Muertos', 'Cantidad de Vivos']  
+    estados=['Cantidad de pasajeros muertos', 'Cantidad de pasajeros vivos']  
 
     plt.pie(y, labels= estados, autopct="%0.1f %%", shadow= True)
     plt.legend(title ="Grafica de sobrevivientes del titanic")
@@ -35,16 +35,16 @@ def grafica_p():
 
 
 def grafica_b():
-    eje_x = ['1','2','3']
-    eje_y = titanic_pdf.groupby('Clase')['Sobrevivió'].count()
-    print(eje_x)
-    print(eje_y)
+    ejex = ['1','2','3']
+    ejey = titanic_pdf.groupby('Clase')['Sobrevivió'].count()
+    print(ejex)
+    print(ejey)
 
-    y=np.array([eje_y[1],eje_y[2], eje_y[3]])
+    y=np.array([ejey[1],ejey[2], ejey[3]])
 
-    plt.bar(eje_x,y)
+    plt.bar(ejex,y)
 
-    plt.ylabel('Cantidad de sobrevivientes')
+    plt.ylabel('Cantidad de pasajeros sobrevivientes')
 
     plt.xlabel('Clases')
 
@@ -59,10 +59,10 @@ def costo_ticket():
 
 menu="""
 1 - Limpieza de datos.
-2 - Busqueda de usuarios por ticket.
-3 - Grafica de personas fallecidad.
-4 - Grafica de personas sobrevivientes por clase.
-5 - Saber los costos de los tickers.
+2 - Busqueda de pasajeros por ticket.
+3 - Grafica de pasajeros fallecidad.
+4 - Grafica de pasajeros sobrevivientes por clase.
+5 - Costos de los tickers.
 6 - Salir
 Elige una opcion: """
 opcion = input(menu)
